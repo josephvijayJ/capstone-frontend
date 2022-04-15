@@ -77,7 +77,7 @@ const Login = () => {
       console.log('onsubmit called');
 
       try {
-        const res = await publicRequest.post('/auth/login', values);
+        const res = await axios.post('https://capstone-backendserver.herokuapp.com/api/auth/login', values);
         console.log(res);
 
         localStorage.setItem('token', res.data.accessToken);
