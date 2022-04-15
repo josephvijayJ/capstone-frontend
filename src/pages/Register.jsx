@@ -95,7 +95,7 @@ const Register = () => {
       console.log('onsubmit called');
       console.log(values);
       try {
-        const res = await publicRequest.post('/auth/register', values);
+        const res = await axios.post('https://capstone-backendserver.herokuapp.com/api/auth/register', values);
         console.log(res);
 
         res.status === 200 && navigate('/');
